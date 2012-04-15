@@ -6,20 +6,23 @@ import javax.swing.JPanel;
   
 public class Pacman extends JPanel {  
     public Pacman() {  
-        setPreferredSize(new Dimension(400, 400));  
+        this.setBackground(Color.red);
     }  
   
     @Override  
     protected void paintComponent(Graphics g) {  
         super.paintComponent(g);  
+        
         Graphics2D g2d = (Graphics2D) g;  
   
         // prostokat  
-        Rectangle2D rectangle = new Rectangle2D.Double(10, 10, 380, 380);  
+        Rectangle2D rectangle = new Rectangle2D.Double(10, 10, this.getSize().width, this.getSize().height);  
         // kolo  
-        Ellipse2D circle = new Ellipse2D.Double(10, 10, 380, 380);  
+        Ellipse2D circle = new Ellipse2D.Double(10, 10, this.getSize().width, this.getSize().height);  
   
         g2d.draw(rectangle);  
         g2d.draw(circle);  
+        
+        
     }  
 } 
