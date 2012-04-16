@@ -27,6 +27,9 @@ public class Actor {
     }
     
  public void paintItem(Graphics g) {
+     
+        
+BufferedImage imageScaled = image.getScaledInstance(this.getSize().width+1,this.getSize().height+1 , Image.SCALE_FAST);
 	g.drawImage(image, width, height, null);
                   
     }
