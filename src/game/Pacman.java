@@ -25,7 +25,9 @@ public class Pacman extends JPanel {
     public void paintComponent(Graphics g){
         super.paintComponent(g); 
         Graphics2D g2d = (Graphics2D) g; 
-        pac.paintItem(g);
+        BufferedImage image = pac.returnImage();
+        Image imageScaled = image.getScaledInstance(this.getSize().width,this.getSize().height, Image.SCALE_FAST);
+	g.drawImage(imageScaled, 34, 54, null);
         
     }
   
