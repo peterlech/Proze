@@ -14,10 +14,7 @@ public class Frame extends JFrame {
     JPanel panel;
     public Frame() {  
         super("::PACMAN::");  
-        panel = new Pacman();  
-  
-         
-     
+        panel = new Pacman();              
   
         initComponents();
  
@@ -50,18 +47,7 @@ public class Frame extends JFrame {
         public void componentResized(ComponentEvent e) {
                 int x = e.getComponent().getSize().width;
                 int y = e.getComponent().getSize().height;
- 
- 
-                System.out.println(x);
-                System.out.println(y);
-                panel.setSize(x, y);
- 
- 
- 
-                System.out.println(panel.getSize());
- 
- 
- 
+                   panel.setSize(x, y);
     }
         });
  

@@ -1,28 +1,40 @@
 package game;
-import java.awt.*;  
-import java.awt.geom.*;  
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel; 
   
 import javax.swing.JPanel;  
   
-public class Pacman extends JPanel {  
+public class Pacman extends JPanel { 
+    Actor pac = new Actor();
+   // private Actor pac = new Actor();
     public Pacman() {  
         this.setBackground(Color.red);
-    }  
-  
-    @Override  
-    protected void paintComponent(Graphics g) {  
-        super.paintComponent(g);  
-        
-        Graphics2D g2d = (Graphics2D) g;  
-  
-        // prostokat  
-        Rectangle2D rectangle = new Rectangle2D.Double(10, 10, this.getSize().width, this.getSize().height);  
-        // kolo  
-        Ellipse2D circle = new Ellipse2D.Double(10, 10, this.getSize().width, this.getSize().height);  
-  
-        g2d.draw(rectangle);  
-        g2d.draw(circle);  
-        
+        	
         
     }  
-} 
+  
+       
+    
+    @Override
+    public void paintComponent(Graphics g){
+        super.paintComponent(g); 
+        Graphics2D g2d = (Graphics2D) g; 
+        pac.paintItem(g);
+        
+    }
+  
+   
+        
+  
+         
+        
+        
+ }  
+  
+   
