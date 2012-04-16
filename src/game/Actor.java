@@ -15,7 +15,7 @@ public class Actor {
     
     
     public Actor(){
-    File imageFile = new File("pacman.JPG");
+    File imageFile = new File("/pacman.jpg");
 		try {
 			image = ImageIO.read(imageFile);
 		} catch (IOException e) {
